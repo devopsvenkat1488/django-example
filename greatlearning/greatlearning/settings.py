@@ -28,7 +28,7 @@ SECRET_KEY = '!hh@vnz)bb=2qm^%=t6$!!7^^!l%rm^lc7%p+v7634)pd0)^x0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['manualvarado22.pythonanywhere.com']
 
 
 # Application definition
