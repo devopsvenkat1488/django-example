@@ -1,0 +1,18 @@
+{% extends 'beauty/base.html' %}
+{% block body_block %}
+
+<div class="jumbotron">
+  <h1>Please Log in, dank je alsjeblieft, please</h1>
+  <form action="{% url 'beauty:user_login' %}" method="POST">
+      {% csrf_token %}
+      <label for="username">Username:</label>
+      <input type="text" name="username">
+
+      <label for="password">Password:</label>
+      <input type="password" name="password">
+
+      <input type="submit" class="btn btn-warning" value="Login o:">
+  </form>
+</div>
+
+{% endblock %}

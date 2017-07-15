@@ -1,0 +1,21 @@
+{% extends "beauty/base.html" %}
+{% load staticfiles %}
+
+{% block body_block %}
+
+<div class="jumbotron">
+  {% if registered %}
+    <h1>Now i'm learning the backend stuff! &lt;3</h1>
+  {% else %}
+    <h1>Please register here!</h1>
+    <h1>Colons</h1>
+    <form enctype="multipart/form-data" method="POST">
+      {{ user_form.as_p }}
+      {% csrf_token %}
+      {{ profile_form.as_p }}
+      <input type="submit" class="btn btn-primary" value="Register">
+    </form>
+  {% endif %}
+</div>
+
+{% endblock %}
